@@ -4,73 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Projeto em Grupo</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Link opcional para ícones (Font Awesome) se quiser usá-los nos inputs -->
+    <!-- Biblioteca de Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Barra de Navegação Superior -->
     <header class="navbar">
-        <!-- Agrupamos o Logo e os Links juntos para ficarem na esquerda -->
         <div class="nav-left-group">
             <div class="logo">Logo</div>
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html">home</a>
                 <a href="termos.html">Termos e Condições</a>
             </nav>
         </div>
     </header>
 
-
-    <!-- Container Principal do Login (Lado Direito) -->
+    <!-- Container do Painel de Login -->
     <main class="login-container">
-        <button class="close-btn">&times;</button>
-        
+        <button class="close-btn" id="btn-fechar-painel">&times;</button>
         <div class="login-box">
             <h2>Login</h2>
             <p class="subtitle">Please login to use the platform</p>
-
-            <form>
-                <!-- Campo de Email -->
+            
+            <form id="form-login">
                 <div class="input-group">
                     <label for="email">Email</label>
                     <div class="input-wrapper">
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" required placeholder="Insira seu e-mail">
                         <i class="fa-regular fa-envelope input-icon"></i>
                     </div>
                 </div>
-
-                <!-- Campo de Senha -->
                 <div class="input-group">
                     <label for="password">Password</label>
                     <div class="input-wrapper">
-                        <input type="password" id="password" required>
+                        <input type="password" id="password" required placeholder="Insira sua senha">
                         <i class="fa-solid fa-lock input-icon"></i>
                     </div>
                 </div>
-
-                <!-- Opções Extras -->
                 <div class="extra-options">
                     <label class="remember-me">
                         <input type="checkbox"> Remember me
                     </label>
-                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                    <a href="#" class="forgot-pass" id="link-forgot">Forgot Password?</a>
                 </div>
-
-                <!-- Botão Entrar -->
-                <button type="submit" class="submit-btn">Login</button>
+                <button type="submit" class="submit-btn" id="btn-enviar-login">Login</button>
             </form>
-
-            <p class="register-text">Don't have an account? <a href="#">Register</a></p>
-
-            <!-- Botões Sociais -->
+            
+            <p class="register-text">Don't have an account? <a href="#" id="link-register">Register</a></p>
+            
             <div class="social-buttons">
-                <button class="social-btn"><i class="fa-brands fa-google"></i> Login with Google</button>
-                <button class="social-btn"><i class="fa-brands fa-facebook-f"></i> Login with Facebook</button>
+                <button class="social-btn" id="btn-google"><i class="fa-brands fa-google"></i> Login with Google</button>
+                <button class="social-btn" id="btn-facebook"><i class="fa-brands fa-facebook-f"></i> Login with Facebook</button>
             </div>
         </div>
     </main>
 
+    <!-- Chamada única do script externo -->
+    <script src="pop.js"></script>
 </body>
 </html>
