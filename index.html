@@ -3,83 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Projeto em Grupo</title>
+    <!-- Biblioteca de Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Logo</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#Termo e Condições">Termo e Condições</a>
-        </nav>
+    <!-- Barra de Navegação Superior -->
+    <header class="navbar">
+        <div class="nav-left-group">
+            <div class="logo">Logo</div>
+            <nav class="nav-links">
+                <a href="index.html">home</a>
+                <a href="termos.html">Termos e Condições</a>
+            </nav>
+        </div>
     </header>
 
-    <main id="home">
-
-        <section class="imagem-fundo">
-            <h2>Bem-vindo!</h2>
-        </section>
-
-        <section class="login">
-
+    <!-- Container do Painel de Login -->
+    <main class="login-container">
+        <button class="close-btn" id="btn-fechar-painel">&times;</button>
+        <div class="login-box">
             <h2>Login</h2>
-            <p>Faça o login para usar a plataforma</p>
-
-            <form action="#" method="post">
-
-                <div>
+            <p class="subtitle">Please login to use the platform</p>
+            
+            <form id="form-login">
+                <div class="input-group">
                     <label for="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu e-mail"
-                        required
-                    >
+                    <div class="input-wrapper">
+                        <input type="email" id="email" required placeholder="Insira seu e-mail">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                    </div>
                 </div>
-
-                <div>
-                    <label for="Senha">Senha</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Digite sua senha"
-                        required
-                    >
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" required placeholder="Insira sua senha">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                    </div>
                 </div>
-
-                <div>
-
-
-                    <a href="#Esqueceu a senha">Esqueceu a senha?</a>
+                <div class="extra-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-pass" id="link-forgot">Forgot Password?</a>
                 </div>
-
-                <button type="submit">Login</button>
-
-                <p>
-                    Ainda não tem uma conta?
-                    <a href="#register">Registre-se</a>
-                </p>
-
-                <button type="button">
-                    Login com o Google
-                </button>
-
-                <button type="button">
-                    Login com o Facebook
-                </button>
-
+                <button type="submit" class="submit-btn" id="btn-enviar-login">Login</button>
             </form>
-        </section>
-
+            
+            <p class="register-text">Don't have an account? <a href="#" id="link-register">Register</a></p>
+            
+            <div class="social-buttons">
+                <button class="social-btn" id="btn-google"><i class="fa-brands fa-google"></i> Login with Google</button>
+                <button class="social-btn" id="btn-facebook"><i class="fa-brands fa-facebook-f"></i> Login with Facebook</button>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Todos os direitos reservados.</p>
-    </footer>
-
+    <!-- Chamada única do script externo -->
+    <script src="pop.js"></script>
 </body>
 </html>
-
