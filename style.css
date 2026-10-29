@@ -1,0 +1,394 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Alinha o painel de login na direita */
+    position: relative;
+    overflow: hidden;
+    
+    /* Gradiente simulando o fundo da imagem */
+    background: linear-gradient(135deg, #400030 0%, #a00060 45%, #ff5e62 70%, #ff9966 100%);
+    
+    /* Para usar a imagem real do pôr do sol, remova as duas barras abaixo e adicione o caminho: */
+    /* background: url('caminho-da-sua-imagem.jpg') no-repeat center center/cover; */
+}
+
+/* Estilização do Topo (Navbar) */
+/* Estilização do Topo (Navbar) */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    z-index: 10;
+}
+
+/* Alinha o logo e os links lado a lado na esquerda */
+.nav-left-group {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço exato entre o Logo e o primeiro link (Home) */
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px; /* Espaço entre o link Home e o link About */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+
+.logo {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Painel Lateral com Efeito Blur (Glow/Frosted Glass) */
+.login-container {
+    width: 35%; /* Ocupa a lateral direita */
+    min-width: 400px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.06); /* Fundo branco super transparente */
+    backdrop-filter: blur(25px); /* Cria o efeito de vidro fosco */
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Botão Fechar (X) */
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+/* Conteúdo interno do painel */
+.login-box {
+    width: 100%;
+    color: #ffffff;
+}
+
+.login-box h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 13px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+/* Inputs de Linha Inferior */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+    padding: 8px 30px 8px 0;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-wrapper input:focus {
+    border-bottom-color: #ffffff;
+}
+
+.input-icon {
+    position: absolute;
+    right: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* Checkbox e Esqueceu a Senha */
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Submit Principal */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Texto de Registro */
+.register-text {
+    text-align: center;
+    font-size: 13px;
+    margin: 25px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.register-text a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* Botões de Redes Sociais com Borda */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/* Responsividade Básica para telas menores */
+@media (max-width: 900px) {
+    body {
+        justify-content: center; /* Centraliza em telas pequenas */
+    }
+    .login-container {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 30px;
+    }
+    .navbar {
+        padding: 20px;
+    }
+}
+
+
+/* --- Estilos Exclusivos da Página de Termos --- */
+
+/* Centraliza o bloco de texto na tela inteira */
+.terms-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px 20px; /* Espaço superior para não cobrir a navbar */
+    z-index: 5;
+}
+
+/* Caixa com efeito de vidro idêntica ao login, mas mais larga para leitura */
+.terms-box {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.terms-box h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.last-updated {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
+}
+
+/* Área rolável caso o texto seja muito longo */
+.terms-content {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+/* Customização da barra de rolagem (Scrollbar) dentro dos termos */
+.terms-content::-webkit-scrollbar {
+    width: 6px;
+}
+.terms-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+.terms-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.terms-content section {
+    margin-bottom: 25px;
+}
+
+.terms-content h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.terms-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: justify;
+}
+
+/* Botão de Voltar estilizado arredondado */
+.terms-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.back-btn {
+    padding: 10px 25px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Destaca visualmente qual página está ativa na Navbar */
+.nav-links a.active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
+    opacity: 1;
+}
